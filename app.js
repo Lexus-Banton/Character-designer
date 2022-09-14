@@ -25,17 +25,18 @@ headSelect.addEventListener('change', () => {
 });
 
 middleSelect.addEventListener('change', () => {
-    // > set the character middle from the value of the middle <select>
-    // > redisplay the character
+    character.middle = middleSelect.value;
+    displayCharacter();
 });
 
 pantsSelect.addEventListener('change', () => {
-    // > set the character head from the value of the head <select>
-    // > redisplay the character
+    character.pants = pantsSelect.value;
+    displayCharacter();
 });
 
 function displayCharacter() {
     headImage.src = 'assets/character/' + character.head + '-head.png';
+    middleImage.src = 'assets/character/' + character.middle + '-middle.png';
     // > set the middle and pants images .src property based on the character middle and pants properties
 }
 
